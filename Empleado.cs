@@ -60,20 +60,20 @@ namespace PROYECTO_salarios_minimos
        public double Porcentaje1()
         {
             if (GetTipo() == "TONCG")
-                return 3.50;
+                return 0.035;
             else if (GetTipo() == "TOSCG")
-                return 3.10;
+                return 0.031;
             else
-                return 2.98;
+                return 0.0298;
         }
         public double Porcentaje2()
         {
             if (GetTipo() == "TONCG")
-                return 3.10;
+                return 0.031;
             else if (GetTipo() == "TOSCG")
-                return 3.98;
+                return 0.0298;
             else
-                return 2.50;
+                return 0.0250;
         }
         public double ValorIncremento()
         {
