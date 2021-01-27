@@ -37,7 +37,7 @@ namespace PROYECTO_salarios_minimos
         public string GetId() => id;
         public string GetTipo() => tipo;
         public double GetSalario() => salario;
-        public string Datos() => $"Nombre: {GetNombre()}\n ID: {GetId()} \n Salario: {GetSalario()} \n";
+        public string Datos() => $"Nombre: {GetNombre()}\n ID: {GetId()} \n Tipo: {GetTipo()} \n Salario: {GetSalario()} \n";
 
         public double SalarioMinimo()
         {
