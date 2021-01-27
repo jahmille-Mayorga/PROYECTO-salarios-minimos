@@ -34,7 +34,7 @@ namespace PROYECTO_salarios_minimos
                 Console.WriteLine("Digite el nombre del empleado:");
                 nombre = validador.ValidarNombre(ReadLine());
                 Console.WriteLine("Digite la cedula del empleado:");
-                cedula = validador.ValidarId(ReadLine());
+                cedula = validador.ValidarId(ReadLine(),contenedora);
                 Console.WriteLine("Digite el tipo de empleado:");
                 tipo = validador.ValidarTipo(ReadLine());
                 Console.WriteLine("Digite el salario del empleado:");

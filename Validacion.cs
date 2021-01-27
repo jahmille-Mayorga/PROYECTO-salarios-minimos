@@ -15,12 +15,12 @@ namespace PROYECTO_salarios_minimos
             }
             return nombre;
         }
-        public string ValidarId(string id)
+        public string ValidarId(string id,Empleados empleados)
         {
             /*Hay paginas que rellenan nombres y fecha de nacimiento con solo poner la cedula
              me gustaria saber esa funcion
              */
-            while(string.IsNullOrEmpty(id)||id.Length!=9)
+            while(string.IsNullOrEmpty(id)||id.Length!=9||empleados.BuscarEmpleado(id)!=-1)
             {
                 Console.WriteLine("Cedula invalida. Digite de nuevo: ");
                 id = Console.ReadLine();

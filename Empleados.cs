@@ -62,7 +62,7 @@ namespace PROYECTO_salarios_minimos
         public string ListarCedulas()
 
         {
-            string texto = " ";
+            string texto = "               Lista de cedulas\n ";
             for(int i=0;i<GetCantidad();i++)
             {
                 texto = texto + registro[i].GetId()+ "\n";
@@ -71,7 +71,7 @@ namespace PROYECTO_salarios_minimos
         }
         public string ListarSalarios()
         {
-            string texto = "";
+            string texto = "              Lista de salarios\n";
             for (int i = 0; i < GetCantidad(); i++)
             {
                 texto = texto + registro[i].GetSalario()+" colones \n";
