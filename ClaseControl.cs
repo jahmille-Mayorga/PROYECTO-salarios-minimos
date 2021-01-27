@@ -75,6 +75,7 @@ namespace PROYECTO_salarios_minimos
                 Console.WriteLine("Salarios antes del aumento \n");
                 Console.WriteLine(contenedora.ListarSalarios());
                 Console.WriteLine("Salarios despues del aumento \n");
+                contenedora.IncrementarSalarios();
                 Console.WriteLine(contenedora.ListarSalarios());
             }
         }
