@@ -48,14 +48,10 @@ namespace PROYECTO_salarios_minimos
             else
                 return 349623.39;
         }
-        public bool Ajuste()
+        public void Ajuste()
         {
             if (GetSalario() < SalarioMinimo())
-            {
                 SetSalario(SalarioMinimo());
-                return true;
-            }
-            return false;
         }
        public double Porcentaje1()
         {
@@ -84,7 +80,7 @@ namespace PROYECTO_salarios_minimos
         }
         public void IncrementoSalarial()
         {
-            SetSalario(GetSalario() + ValorIncremento());
+            SetSalario(ValorIncremento()+GetSalario());
         }
         public string CompararSalario(Empleado e)
         {
