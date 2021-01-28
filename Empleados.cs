@@ -45,6 +45,27 @@ namespace PROYECTO_salarios_minimos
         }
        Tengo que encontrar la forma de eliminar elementos especificos de arrays en c#
        */
+       public bool EliminarEmpleado(string id) /*
+       Parece que lo mejor es usar una lista en estos casos:
+            https://stackoverflow.com/questions/457453/remove-element-of-a-regular-array
+                                                */
+        {
+            bool valor = false;
+            Empleado []em=new Empleado[registro.Length];
+            int n = GetCantidad();
+            for(int i=0;i<n;i++)
+            {
+                if (registro[i].GetId() != id)
+                    em[i] = registro[i];
+                else
+                {
+                    SetCantidad(GetCantidad() - 1);
+                    valor = true;
+                }
+            }
+            registro = em;
+            return valor;
+        }
        public void IncrementarSalarios()
         {
             for(int i=0;i<GetCantidad();i++)

@@ -21,8 +21,9 @@ namespace PROYECTO_salarios_minimos
             "                 Menu\n" +
             "(1)Insertar empleado\n" +
             "(2)Consultar lista de empleados\n" +
-            "(3)Incrementar salarios\n" +
-            "(4)Salir de sistema\n"+
+            "(3)Borrar empleado\n" +
+            "(4)Incrementar salarios\n" +
+            "(5)Salir de sistema\n"+
             "Digite una opcion";
         public void InsertarEmpleado()
         {
@@ -64,6 +65,22 @@ namespace PROYECTO_salarios_minimos
                 WriteLine(empleadoDeTurno.Datos());
             }
         }
+        public void EliminarEmpleado()
+        {
+            if(contenedora.GetCantidad()==0)
+                Console.WriteLine("No hay empleados para eliminar");
+            else
+            {
+                Console.WriteLine(contenedora.ListarCedulas());
+                Console.WriteLine("Digite el ID:");
+                string id = Console.ReadLine();
+                if (contenedora.EliminarEmpleado(id) == true)
+                    Console.WriteLine("Se ha eliminado el empleado");
+                else
+                    Console.WriteLine("No se encontro el empleado a eliminar");
+            }
+            
+        }
         public void IncrementarSalarios()
         {
             if(contenedora.GetCantidad()==0)
@@ -83,33 +100,24 @@ namespace PROYECTO_salarios_minimos
         {
             WriteLine(Instrucciones());
             string opcion = Console.ReadLine();
-            while(opcion!="4")
+            while(opcion!="5")
             {
-                if(opcion=="1")
-                {
+                if (opcion == "1")
                     InsertarEmpleado();
-                }
-                else if(opcion=="2")
-                {
+                else if (opcion == "2")
                     ConsultarEmpleado();
-                }
-                else if(opcion=="3")
-                {
+                else if (opcion == "3")
+                    EliminarEmpleado();
+                else if (opcion == "4")
                     IncrementarSalarios();
-                }
-                else if(opcion=="4")
-                {
+                else if (opcion == "5")
                     WriteLine("Ha salido exitosamente");
-                }
                 else
-                {
                     WriteLine("Opcion equivocada");
-                }
                 Console.ReadKey();
                 Console.Clear();
                 WriteLine(Instrucciones());
                 opcion = Console.ReadLine();
-
             }
 
         }
